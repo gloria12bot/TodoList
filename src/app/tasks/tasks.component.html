@@ -1,0 +1,42 @@
+<div class="content">
+  <div class="column">
+    <h2 style="margin-bottom: 20px;">
+      Add new Task
+    </h2>
+    <form [formGroup]="userForm" class="example-form">
+      <div class="block">
+        <mat-form-field
+          class="example-full-width"
+          MatFormFieldControl="user"
+        >
+          <input
+            matInput
+            type="text"
+            placeholder="New Task"
+            formControlName="New Task"
+          />
+        </mat-form-field>
+      </div>
+      <div class="text-right">
+        <button
+        (click)="onSave($event)"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          class="btn btn-success"
+        >
+          SAVE
+        </button>
+
+        <button
+          (click)="onCancel($event)"
+          mat-raised-button
+          class="cancel"
+          type="button"
+        >
+          CANCEL
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
